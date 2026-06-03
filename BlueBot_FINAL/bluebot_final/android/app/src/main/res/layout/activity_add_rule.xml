@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/fond">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/tv_titre" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/blanc"
+            android:textSize="17sp" android:textStyle="bold" android:layout_marginBottom="18dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="⏱  Temps autorisé par jour" android:textColor="@color/bleu_clair"
+            android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+            <Switch android:id="@+id/sw_temps" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Activer" android:textColor="@color/blanc" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <EditText android:id="@+id/et_temps" android:layout_width="match_parent" android:layout_height="46dp"
+            android:hint="Minutes autorisées par jour (ex : 30)" android:inputType="number"
+            android:enabled="false" android:layout_marginBottom="18dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="🚀  Nombre d'ouvertures par jour" android:textColor="@color/bleu_clair"
+            android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+            <Switch android:id="@+id/sw_lanc" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Activer" android:textColor="@color/blanc" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <EditText android:id="@+id/et_lanc" android:layout_width="match_parent" android:layout_height="46dp"
+            android:hint="Nombre max d'ouvertures (ex : 10)" android:inputType="number"
+            android:enabled="false" android:layout_marginBottom="18dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="🌙  Plage horaire bloquée" android:textColor="@color/bleu_clair"
+            android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+            <Switch android:id="@+id/sw_hor" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Activer" android:textColor="@color/blanc" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <EditText android:id="@+id/et_hor" android:layout_width="match_parent" android:layout_height="46dp"
+            android:hint="HH:MM-HH:MM  (ex : 22:00-08:00)" android:enabled="false"
+            android:layout_marginBottom="26dp"/>
+        <Button android:id="@+id/btn_sauvegarder" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="✅  Sauvegarder" android:layout_marginBottom="10dp"/>
+        <Button android:id="@+id/btn_supprimer" android:layout_width="match_parent"
+            android:layout_height="44dp" android:text="🗑  Supprimer" android:backgroundTint="@color/rouge"/>
+    </LinearLayout>
+</ScrollView>

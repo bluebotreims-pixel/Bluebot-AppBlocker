@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/fond">
+    <EditText android:id="@+id/et_recherche" android:layout_width="match_parent"
+        android:layout_height="50dp" android:layout_margin="12dp"
+        android:hint="🔍  Rechercher une app..." android:padding="12dp"
+        android:textColor="@color/blanc" android:textColorHint="@color/gris" android:background="@color/surface"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_apps"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>
