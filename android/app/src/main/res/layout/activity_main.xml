@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/fond">
+
+    <LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent" android:layout_height="68dp"
+        android:background="@color/surface" android:gravity="center_vertical"
+        android:orientation="horizontal" android:paddingStart="14dp" android:paddingEnd="14dp" android:elevation="4dp">
+        <ImageView android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/logo" android:contentDescription="Logo"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:layout_marginStart="10dp" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="BlueBot" android:textColor="@color/blanc" android:textSize="18sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="App Blocker — FIRST Tech Challenge Reims"
+                android:textColor="@color/bleu_clair" android:textSize="10sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:paddingTop="68dp">
+        <androidx.cardview.widget.CardView android:id="@+id/card_statut"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_margin="12dp" app:cardCornerRadius="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:id="@+id/tv_statut" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Vérification..."
+                    android:textColor="@color/blanc" android:textSize="13sp" android:textStyle="bold"/>
+                <Button android:id="@+id/btn_activer" android:layout_width="match_parent"
+                    android:layout_height="40dp" android:layout_marginTop="6dp"
+                    android:text="Activer le service d'accessibilité" android:textSize="12sp" android:visibility="gone"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp" android:layout_marginBottom="4dp"
+            android:text="APPS SURVEILLÉES" android:textColor="@color/gris" android:textSize="10sp"/>
+        <TextView android:id="@+id/tv_vide" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Aucune app surveillée.\nAppuyez sur + pour commencer."
+            android:textColor="@color/gris" android:textSize="13sp" android:visibility="gone"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_regles"
+            android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:paddingHorizontal="12dp" android:paddingBottom="72dp" android:clipToPadding="false"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="20dp"
+        android:src="@android:drawable/ic_input_add" android:contentDescription="Ajouter"
+        app:backgroundTint="@color/bleu" app:tint="@color/blanc"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

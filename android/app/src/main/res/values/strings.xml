@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlueBot</string>
+    <string name="service_label">BlueBot — Surveillance</string>
+    <string name="service_desc">Détecte les applications en premier plan pour appliquer vos limites.</string>
+</resources>
